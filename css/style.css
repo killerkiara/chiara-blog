@@ -9,7 +9,7 @@
 /* Basic */
 
 	body, #skel-layers-wrapper {
-		background: #f3f6fa;
+		background: #dcd8d0;
 	}
 
 	body.is-loading * {
@@ -106,9 +106,6 @@
 
 /* Section/Article */
 
-	section.special, article.special {
-		text-align: center;
-	}
 
 	header.major {
 		padding-bottom: 2em;
@@ -134,15 +131,17 @@
 
 		header.special:before {
 			left: 0;
+      float: right;
 		}
 
 		header.special:after {
 			right: 0;
+      float: left;
 		}
 
 		header.special h2 {
 			margin-bottom: 0;
-			font-family: 'EB Garamond', serif;		
+			font-family: 'EB Garamond', serif;
 		}
 
 		header.special h2 + p {
@@ -398,15 +397,31 @@
 			padding-left: 0.5em;
 		}
 
-	ul.icons {
-		cursor: default;
-	}
 
 		ul.icons li {
 			display: inline-block;
 			line-height: 1em;
 			padding-left: 0.5em;
 		}
+
+    ul.icons li a {
+      color: #FFF;
+      display: inline-block;
+      border: none;
+    }
+
+    ul.icons li a::before {
+      border-radius: 100%;
+      border: solid 1px #fff;
+      display: block;
+      font-size: 1.3em;
+      height: 2.5em;
+      line-height: 2.5em;
+      position: relative;
+      text-align: center;
+      top: 0;
+      width: 2.5em;
+    }
 
 			ul.icons li:first-child {
 				padding-left: 0;
@@ -496,7 +511,7 @@
 	input[type="submit"],
 	input[type="reset"],
 	.button {
-		-moz-appearance: none;
+		/*-moz-appearance: none;
 		-webkit-appearance: none;
 		-o-appearance: none;
 		-ms-appearance: none;
@@ -505,46 +520,47 @@
 		-webkit-transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out, background-color 0.2s ease-in-out;
 		-o-transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out, background-color 0.2s ease-in-out;
 		-ms-transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out, background-color 0.2s ease-in-out;
-		transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out, background-color 0.2s ease-in-out;
+		transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out, background-color 0.2s ease-in-out;*/
 		background: none;
-		border: solid 1px;
+		/*border: solid 1px;*/
 		color: inherit;
 		cursor: pointer;
 		display: inline-block;
 		font-size: 0.8em;
 		font-weight: 900;
 		letter-spacing: 2px;
-		min-width: 18em;
+		/*min-width: 18em;
 		padding: 0 0.75em;
-		line-height: 3.75em;
+		line-height: 3.75em;*/
 		text-align: center;
 		text-decoration: none;
 		text-transform: uppercase;
+    border: 0;
 	}
 
 		input[type="button"]:hover,
 		input[type="submit"]:hover,
 		input[type="reset"]:hover,
 		.button:hover {
-			background: rgba(188, 202, 206, 0.15);
-			border-color: inherit;
+			/*background: rgba(188, 202, 206, 0.15);*/
+			border-bottom: 1px solid #7c8081;
 		}
 
 		input[type="button"].special,
 		input[type="submit"].special,
 		input[type="reset"].special,
 		.button.special {
-			background: #83d3c9;
+			/*background: #83d3c9;
 			border-color: #83d3c9;
-			color: white !important;
+			color: white !important;*/
 		}
 
 			input[type="button"].special:hover,
 			input[type="submit"].special:hover,
 			input[type="reset"].special:hover,
 			.button.special:hover {
-				background: #96dad1 !important;
-				border-color: #96dad1 !important;
+				/*background: #96dad1 !important;
+				border-color: #96dad1 !important;*/
 			}
 
 		input[type="button"].fit,
@@ -567,7 +583,7 @@
 
 	.wrapper {
 		margin-bottom: 5em;
-		padding: 5em;
+		padding: 0 5em;
 	}
 
 		.wrapper.style1 {
@@ -575,27 +591,21 @@
 		}
 
 		.wrapper.style2 {
-			background-color: #83d3c9;
-			background-image: url("images/light-bl.svg"), url("images/light-br.svg");
-			background-position: bottom left, bottom right;
-			background-repeat: no-repeat, no-repeat;
-			background-size: 25em, 25em;
-			color: white;
 		}
 
 			.wrapper.style2 .button:hover {
-				background: rgba(255, 255, 255, 0.15) !important;
+				/*background: rgba(255, 255, 255, 0.15) !important;*/
 			}
 
 			.wrapper.style2 .button.special {
-				background: white;
+				/*background: white;
 				border-color: white;
-				color: #83d3c9 !important;
+				color: #83d3c9 !important;*/
 			}
 
 				.wrapper.style2 .button.special:hover {
-					border-color: inherit !important;
-					color: white !important;
+					/*border-color: inherit !important;
+					color: white !important;*/
 				}
 
 		.wrapper.style3 {
@@ -907,33 +917,30 @@
 /* Footer */
 
 	#footer {
-		background: #e8eef4;
-		color: #7c8081;
-		padding: 5em 5em 10em 5em;
+		background-color: #000;
+    background-image: url("images/light-tl.svg"), url("images/light-tr.svg");
+		background-position: top left, top right;
+		background-repeat: no-repeat;
+		background-size: 25em;
+		padding: 7em 0;
+    background-repeat: no-repeat;
+    background-size: 25em;
+    opacity: 0.85;
 		text-align: center;
+    line-height: 1em;
+    color: #fff;
 	}
-
-		#footer .copyright {
-			font-size: 0.8em;
-			line-height: 1em;
-		}
+    #footer .copyright {
+      font-size: 0.85em;
+    }
 
 			#footer .copyright a {
 				color: inherit;
+        border: 0;
 			}
-
-			#footer .copyright li {
-				display: inline-block;
-				margin-left: 1em;
-				padding-left: 1em;
-				border-left: dotted 1px;
-			}
-
-				#footer .copyright li:first-child {
-					margin: 0;
-					padding: 0;
-					border: 0;
-				}
+        #footer .copyright a:hover {
+          text-decoration: underline;
+        }
 
 /* Layer */
 

@@ -1,7 +1,7 @@
 name: Chiara Sarta
 email: hello@chiara.codes
 description: Chiara's blog
-baseurl: ''
+baseurl: /
 url: blog.chiara.codes
 twitter_username: killerkiaraa
 github_username:  killerkiara
