@@ -3,11 +3,14 @@ layout: default
 ---
 <article id="main">
   <header class="special container">
-    <h2 class="post-title">{{ page.title }}</h2>
-    <p class="post-meta">{{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</p>
+    <span class="icon"></span>
   </header>
-  <section class="style4 wrapper container">
-    {{ content }}
+  <section class="wrapper container">
+    <div class="wrapper post">
+      <h2 class="post-title">{{ page.title }}</h2>
+      <p class="post-meta">{{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</p>
+      {{ content }}
+    </div>
   </section>
   <footer>
     {% if page.previous %}

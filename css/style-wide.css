@@ -7,12 +7,12 @@
 /* Basic */
 
 	body, input, select, textarea {
-		font-size: 14pt;
+		/*font-size: 21px;*/
 	}
 
 /* Section/Article */
 
 	header.special {
-		padding-top: 5.5em;
+		/*padding-top: 5.5em;*/
 		/*margin-bottom: 4em;*/
 	}

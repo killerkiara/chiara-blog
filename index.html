@@ -3,14 +3,13 @@ layout: landing-page
 title:  Blog | Chiara Sarta
 ---
 <article id="main">
-  <header class="special container">
-    <span class="icon fa-mobile"></span>
-    <h2>My <strong>Blog</strong></h2>
-  </header>
   <section class="wrapper container">
+    <header class="special">
+      <span class="icon"></span>
+    </header>
     <ul class="posts">
       {% for post in site.posts %}
-        <li class="wrapper style2">
+        <li class="wrapper">
           <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
           {{ post.excerpt }}
           <section class="special">
@@ -19,6 +18,9 @@ title:  Blog | Chiara Sarta
             </ul>
           </section>
         </li>
+        <header class="special">
+          <span class="icon"></span>
+        </header>
       {% endfor %}
     </ul>
   </section>
